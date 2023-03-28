@@ -1,5 +1,7 @@
 # dependencies
 /node_modules
+03-backend/spring-boot-library/node_modules/
+02-frontend/react-library/node_modules/
 /.pnp
 .pnp.js
 
