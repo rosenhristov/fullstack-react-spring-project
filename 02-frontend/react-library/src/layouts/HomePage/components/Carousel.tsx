@@ -21,21 +21,22 @@ export const Carousel = () => {
                 throw new Error('Something went wrong while loading the books!');
             }
 
-            const responseJson = await response.json();
-            const responseData = responseJson._embedded.books;
-            const loadedBooks: BookModel[] = [];
+            const responseJson = await response.json()
+            const responseData = responseJson._embedded.books
+            const loadedBooks: BookModel[] = []
 
             for (const key in responseData) {
-                loadedBooks.push({
-                    id: responseData[key].id,
-                    title: responseData[key].title,
-                    author: responseData[key].author,
-                    description: responseData[key].description,
-                    copies: responseData[key].copies,
-                    copiesAvailable: responseData[key].copiesAvailable,
-                    category: responseData[key].category,
-                    img: responseData[key].img,
-                });
+                loadedBooks.push(
+                    {
+                        id: responseData[key].id,
+                        title: responseData[key].title,
+                        author: responseData[key].author,
+                        description: responseData[key].description,
+                        copies: responseData[key].copies,
+                        copiesAvailable: responseData[key].copiesAvailable,
+                        category: responseData[key].category,
+                        img: responseData[key].img,
+                    });
             }
 
             setBooks(loadedBooks);

@@ -7,19 +7,17 @@ export const SearchBook: React.FC<{book: BookModel}> = (props) => {
             <div className='row g-0'>
                 <div className='col-md-2'>
                     <div className='d-none d-lg-block'>
-                        {props.book.img ?
-                            <img src={props.book.img} width='123' height='196' alt='Book'/>
-                            :
-                            <img src={require('../../Images/BooksImages/book-luv2code-1000.png')}
-                                 width='123' height='196' alt='Book'/>
+                        {props.book.img
+                            ? <img src={props.book.img} width='123' height='196' alt='Book'/>
+                            : <img src={require('../../Images/BooksImages/book-luv2code-1000.png')}
+                                   width='123' height='196' alt='Book'/>
                         }
                     </div>
                     <div className='d-lg-none d-flex justify-content-center align-items-center'>
-                        {props.book.img ?
-                            <img src={props.book.img} width='123' height='196' alt='Book'/>
-                            :
-                            <img src={require('../../Images/BooksImages/book-luv2code-1000.png')}
-                                 width='123' height='196' alt='Book'/>
+                        {props.book.img
+                            ? <img src={props.book.img} width='123' height='196' alt='Book'/>
+                            : <img src={require('../../Images/BooksImages/book-luv2code-1000.png')}
+                                   width='123' height='196' alt='Book'/>
                         }
                     </div>
                 </div>
